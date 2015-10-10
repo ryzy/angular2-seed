@@ -23,10 +23,10 @@ module.exports = function(config) {
       'node_modules/reflect-metadata/Reflect.js',
 
       { pattern: 'node_modules/angular2/**/*.js', included: false, watched: false },
-      { pattern: 'node_modules/@reactivex/rxjs/**', included: false, watched: false, served: true },
+      { pattern: 'node_modules/angular2/node_modules/@reactivex/rxjs/**', included: false, watched: false },
       { pattern: 'test/**/*.js', included: false, watched: true },
 
-      'test-main.js',
+      'test-main.js'
     ],
 
 
