@@ -25,6 +25,7 @@ module.exports = function(config) {
       { pattern: 'node_modules/angular2/**/*.js', included: false, watched: false },
       { pattern: 'node_modules/angular2/node_modules/@reactivex/rxjs/**', included: false, watched: false },
       { pattern: 'test/**/*.js', included: false, watched: true },
+      { pattern: 'node_modules/systemjs/dist/system-polyfills.js', included: false, watched: false }, // PhantomJS2 tries to load `node_modules/systemjs/dist/system-polyfills.js` from there
 
       'test-main.js'
     ],
@@ -66,7 +67,10 @@ module.exports = function(config) {
 
     // start these browsers
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
-    browsers: ['Chrome'],
+    browsers: [
+      'PhantomJS2',
+      'Chrome'
+    ],
 
 
     // Continuous Integration mode
